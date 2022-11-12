@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-studiocitymobileapp-dev-105948-authRole",
+      "UnauthRoleArn": "arn:aws:iam::056222314303:role/amplify-studiocitymobileapp-dev-105948-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::056222314303:role/amplify-studiocitymobileapp-dev-105948-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-studiocitymobileapp-dev-105948-deployment",
+      "UnauthRoleName": "amplify-studiocitymobileapp-dev-105948-unauthRole",
+      "StackName": "amplify-studiocitymobileapp-dev-105948",
+      "StackId": "arn:aws:cloudformation:us-east-2:056222314303:stack/amplify-studiocitymobileapp-dev-105948/e7f9a9d0-c0c2-11ec-903f-0650406514c4",
+      "AmplifyAppId": "dphrhbu55uk8g"
+    },
+    "categories": {
+      "auth": {
+        "studiocitymobileappbbee7f24": {}
+      }
+    }
+  }
+}
