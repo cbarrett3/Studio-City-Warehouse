@@ -1,46 +1,46 @@
 # OSX
 #
-.DS_Store
+react-native-client/.DS_Store
 
 # Xcode
 #
-build/
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-xcuserdata
-*.xccheckout
-*.moved-aside
-DerivedData
-*.hmap
-*.ipa
-*.xcuserstate
+react-native-client/build/
+react-native-client/*.pbxuser
+react-native-client/!default.pbxuser
+react-native-client/*.mode1v3
+react-native-client/!default.mode1v3
+react-native-client/*.mode2v3
+react-native-client/!default.mode2v3
+react-native-client/*.perspectivev3
+react-native-client/!default.perspectivev3
+react-native-client/xcuserdata
+react-native-client/*.xccheckout
+react-native-client/*.moved-aside
+react-native-client/DerivedData
+react-native-client/*.hmap
+react-native-client/*.ipa
+react-native-client/*.xcuserstate
 
 # Android/IntelliJ
 #
-build/
-.idea
-.gradle
-local.properties
-*.iml
-*.hprof
+react-native-client/build/
+react-native-client/.idea
+react-native-client/.gradle
+react-native-client/local.properties
+react-native-client/*.iml
+react-native-client/*.hprof
 
 # node.js
 #
-node_modules/
-npm-debug.log
-yarn-error.log
+react-native-client/node_modules/
+react-native-client/npm-debug.log
+react-native-client/yarn-error.log
 
 # BUCK
-buck-out/
-\.buckd/
-*.keystore
-!debug.keystore
+react-native-client/buck-out/
+react-native-client/\.buckd/
+react-native-client/*.keystore
+react-native-client/!debug.keystore
 
 # fastlane
 #
@@ -49,33 +49,32 @@ buck-out/
 # For more information about the recommended setup visit:
 # https://docs.fastlane.tools/best-practices/source-control/
 
-*/fastlane/report.xml
-*/fastlane/Preview.html
-*/fastlane/screenshots
+react-native-client/*/fastlane/report.xml
+react-native-client/*/fastlane/Preview.html
+react-native-client/*/fastlane/screenshots
 
 # Bundle artifact
-*.jsbundle
+react-native-client/*.jsbundle
 
 # CocoaPods
-/ios/Pods/
+react-native-client//ios/Pods/
 
 #amplify-do-not-edit-begin
-amplify/\#current-cloud-backend
-amplify/.config/local-*
-amplify/logs
-amplify/mock-data
-amplify/backend/amplify-meta.json
-amplify/backend/.temp
-build/
-dist/
-node_modules/
-aws-exports.js
-awsconfiguration.json
-amplifyconfiguration.json
-amplifyconfiguration.dart
-amplify-build-config.json
-amplify-gradle-config.json
-amplifytools.xcconfig
-.secret-*
-**.sample
-#amplify-do-not-edit-end
+react-native-client/amplify/\#current-cloud-backend
+react-native-client/amplify/.config/local-*
+react-native-client/amplify/logs
+react-native-client/amplify/mock-data
+react-native-client/amplify/backend/amplify-meta.json
+react-native-client/amplify/backend/.temp
+react-native-client/build/
+react-native-client/dist/
+react-native-client/node_modules/
+react-native-client/aws-exports.js
+react-native-client/awsconfiguration.json
+react-native-client/amplifyconfiguration.json
+react-native-client/amplifyconfiguration.dart
+react-native-client/amplify-build-config.json
+react-native-client/amplify-gradle-config.json
+react-native-client/amplifytools.xcconfig
+react-native-client/.secret-*
+react-native-client/**.sample

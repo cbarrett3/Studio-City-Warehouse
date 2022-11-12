@@ -15,8 +15,8 @@ import LinksNavigator from './components/Links/LinksNavigator';
 import MessagesNavigator from './components/Messages/MessagesNavigator';
 import NotificationsNavigator from './components/Notifications/NotificationsNavigator';
 import {Auth} from 'aws-amplify';
-import {Router} from './routes/Router';
-import {AuthProvider} from './contexts/Auth';
+import {Router} from './react-native-client/routes/Router';
+import {AuthProvider} from './react-native-client/contexts/Auth';
 
 const App: React.FC = () => {
 //   const [isLoggedIn, setIsLoggedIn] = useState(false);

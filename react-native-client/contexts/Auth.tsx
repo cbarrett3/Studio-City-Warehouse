@@ -1,7 +1,7 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { authService } from '../services/authService';
-import { AuthContextData, AuthData } from '../types';
+import { authService } from '../../services/authService';
+import { AuthContextData, AuthData } from '../../types';
 // creates the Auth Context with the custom data type and a empty object
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
