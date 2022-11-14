@@ -16,7 +16,13 @@
         "reactclientamplifybf68c45c": {}
       },
       "function": {
-        "featuredcityfunction": {}
+        "featuredcityfunction": {
+          "deploymentBucketName": "amplify-reactclientamplify-dev-92156-deployment",
+          "s3Key": "amplify-builds/featuredcityfunction-3650586d2b68594a756b-build.zip"
+        }
+      },
+      "api": {
+        "studiocityapi": {}
       }
     }
   }
