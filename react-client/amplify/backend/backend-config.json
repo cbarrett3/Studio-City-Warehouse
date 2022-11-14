@@ -32,5 +32,21 @@
       "service": "Lambda",
       "dependsOn": []
     }
+  },
+  "api": {
+    "studiocityapi": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "featuredcityfunction",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
+    }
   }
 }

@@ -26,6 +26,21 @@ app.use(function (req, res, next) {
  * Example get method *
  **********************/
 
+app.get('/featuredcity/info', function (req, res) {
+  const info = [
+    { name: 'Minneapolis', symbol: 'MPLS', month: 'November', year: 2022 },
+  ];
+  res.json({ info });
+});
+
+app.get('/featuredcity/artists', function (req, res) {
+  const artists = [
+    { name: 'Dog Creation', month: 'November', year: 2022 },
+    { name: 'Squire', month: 'November', year: 2022 },
+  ];
+  res.json({ artists });
+});
+
 app.get('/item', function (req, res) {
   // Add your code here
   res.json({ success: 'get call succeed!', url: req.url });
@@ -42,12 +57,20 @@ app.get('/item/*', function (req, res) {
 
 app.post('/item', function (req, res) {
   // Add your code here
-  res.json({ success: 'post call succeed!', url: req.url, body: req.body });
+  res.json({
+    success: 'post call succeed!',
+    url: req.url,
+    body: req.body,
+  });
 });
 
 app.post('/item/*', function (req, res) {
   // Add your code here
-  res.json({ success: 'post call succeed!', url: req.url, body: req.body });
+  res.json({
+    success: 'post call succeed!',
+    url: req.url,
+    body: req.body,
+  });
 });
 
 /****************************

@@ -44,7 +44,7 @@ Your app is ready to be deployed!
 8. run `amplify init`
 
 --------------------------------------------------------------------
-### Amplify Services
+#### Amplify Services
 ##### Auth (AWS Cognito)
 - run `amplify add auth`
 - do you want to use the default authentication and security configuration? `Default Configuration`
@@ -58,6 +58,14 @@ Your app is ready to be deployed!
 - provide an AWS Lambda function name `featuredcityfunction`
 - choose the runtime that you want to use `NodeJS`
 
+##### API (AWS API Gateway)
+- run `amplify add api`
+- select from one of the below mentioned services: `REST`
+- provide a friendly name for your resource to be used as a label for this category in the project: `studiocityapi`
+- provide a path (e.g., /book/{isbn}): `/featuredcity`
+- choose a Lambda source: `use a Lambda function already added in the current Amplify project`
+- restrict API access?: `No`
+- do you want to add another path?: `No`
 
 ##### Amplify CLI Basics
 - `amplify status`
