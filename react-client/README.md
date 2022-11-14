@@ -81,3 +81,9 @@ Your app is ready to be deployed!
 - `amplify`: code and config for amplify project
 - `amplify/backend`: local code for project such as the GraphQL schema for an AppSync API, the source cdoe for any serverless functions, and infastrcture as code representing the current local status of the Amplify project
 - `amplify/#current-cloud-backend`: holds the code and configurations that reflect what resources were deployed in to the cloud with your last Amplify push command. It helps the CLI differentiate between the configuration of the resources already provisioned in the cloud and what is currently in your local backend directory (which reflects your local changes).
+
+
+##### Key Resources
+- https://ui.docs.amplify.aws/react/connected-components/
+- https://us-east-2.console.aws.amazon.com/console/home?region=us-east-2
+- https://docs.google.com/document/d/1hBidMUij7v8Pfeh17i8wTj3-k9QNpUfnTrwp3AOY0ec/edit
