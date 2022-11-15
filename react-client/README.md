@@ -57,8 +57,9 @@ Your app is ready to be deployed!
 - select which capability you want to add `Lambda function (serverless function)`
 - provide an AWS Lambda function name `featuredcityfunction`
 - choose the runtime that you want to use `NodeJS`
+- run `amplify push` to deploy
 
-##### API (AWS API Gateway)
+##### API (AWS API Gateway - REST)
 - run `amplify add api`
 - select from one of the below mentioned services: `REST`
 - provide a friendly name for your resource to be used as a label for this category in the project: `studiocityapi`
@@ -66,7 +67,18 @@ Your app is ready to be deployed!
 - choose a Lambda source: `use a Lambda function already added in the current Amplify project`
 - restrict API access?: `No`
 - do you want to add another path?: `No`
+- run `amplify push` to deploy
 
+##### API (AWS AppSync API - GraphQL)
+- run `amplify add api`
+- select from one of the below mentioned services: `GraphQL`
+- provide API name: `studiocitygraphqlapi`
+- choose the default authorization type for the API: `API key`
+- enter a description for the API key: `studio city graphql public api key`
+- after how many days from now the API key should expire (1-365): `365`
+- do you want to edit the schema now?: `Yes`
+- run `amplify push` to deploy
+l
 ##### Amplify CLI Basics
 - `amplify status`
 - `amplify add`
