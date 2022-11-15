@@ -78,7 +78,7 @@ Your app is ready to be deployed!
 - after how many days from now the API key should expire (1-365): `365`
 - do you want to edit the schema now?: `Yes`
 - run `amplify push` to deploy
-l
+
 ##### Amplify CLI Basics
 - `amplify status`
 - `amplify add`
