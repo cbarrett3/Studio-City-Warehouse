@@ -8,6 +8,7 @@ import {
   deleteNote as DeleteNote,
   updateNote as UpdateNote,
 } from './graphql/mutations';
+import { onCreateNote } from './graphql/subscriptions';
 import { v4 as uuid } from 'uuid';
 import '@aws-amplify/ui-react/styles.css';
 import 'antd/dist/antd.min.css';
@@ -146,6 +147,17 @@ function App() {
   useEffect(() => {
     //  fetchFeaturedCityInfo();
     fetchNotes();
+    const subscription = API.graphql({
+      query: onCreateNote,
+    }).subscribe({
+      // next is invocted when a new note is created
+      next: (noteData) => {
+        const note = noteData.value.data.onCreateNote;
+        if (CLIENT_ID === note.clientId) return;
+        dispatch({ type: 'ADD_NOTE', note });
+      },
+    });
+    return () => subscription.unsubscribe();
   }, []);
 
   function renderItem(item) {
