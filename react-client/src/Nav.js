@@ -2,13 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Public from './Public';
 import Profile from './Profile';
 import Protected from './Protected';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  NavLink,
-  useLocation,
-} from 'react-router-dom';
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import { Menu } from 'antd';
 import {
   HomeOutlined,
@@ -82,13 +76,5 @@ const Nav = (props) => {
     </BrowserRouter>
   );
 };
-
-// This styling will be applied to a <NavLink> when the
-// route that it links to is currently selected.
-let activeStyle = {
-  textDecoration: 'underline',
-};
-
-let activeClassName = 'underline';
 
 export default Nav;
