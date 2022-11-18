@@ -65,24 +65,11 @@ const menuItems = [
 ];
 
 const Nav = (props) => {
-  const [current, setCurrent] = useState('home');
-
-  //   let location = useLocation();
-  //  const location = useLocation();
-  //  useEffect(() => {
-  //    console.log(location);
-  //    //  const location = window.location.href.split('/');
-  //    //  const pathname = location[location.length - 1];
-  //    //  setCurrent(pathname ? pathname : 'home');
-  //  }, [location]);
-
   return (
     <BrowserRouter>
       <div>
         <Menu
           defaultSelectedKeys={['home']}
-          //  selectedKeys={['home']}
-          //  selectedKeys={[this.props.location.pathname,]}
           mode="horizontal"
           items={menuItems}
         ></Menu>
