@@ -13,7 +13,62 @@ code {
 }
 
 :root {
-   --amplify-primary-color: #1890ff
+   /* --amplify-primary-color: #1890ff
    --amplify-primary-tint: #1890ff
-   --amplify-primary-shade: #1890ff
+   --amplify-primary-shade: #1890ff */
+   --amplify-primary-color: #d0ae0d
+   --amplify-primary-tint: #d0ae0d
+   --amplify-primary-shade: #d0ae0d
 }
+
+
+.ant-menu-horizontal > .ant-menu-item:before,
+.ant-menu-horizontal > .ant-menu-item:hover,
+.ant-menu-horizontal > .ant-menu-item:after,
+.ant-menu-horizontal > .ant-menu-item-active,
+.ant-menu-horizontal > .ant-menu-item-active:before,
+.ant-menu-horizontal > .ant-menu-item-active:after,
+.ant-menu-horizontal > .ant-menu-item-open, 
+.ant-menu-horizontal > .ant-menu-item-open:before,
+.ant-menu-horizontal > .ant-menu-item-open:hover, 
+.ant-menu-horizontal > .ant-menu-item-open:after, 
+.ant-menu-horizontal > .ant-menu-overflow-item-open, 
+.ant-menu-horizontal > .ant-menu-overflow-item-open:before, 
+.ant-menu-horizontal > .ant-menu-overflow-item-open:hover,
+.ant-menu-horizontal > .ant-menu-overflow-item-open:after,
+.ant-menu-horizontal > .ant-menu-item-selected,
+.ant-menu-horizontal > .ant-menu-item-selected:before,
+.ant-menu-horizontal > .ant-menu-item-selected:after,
+.ant-menu-horizontal > .ant-menu-item-selected:hover,
+.ant-menu > .ant-menu-submenu-selected {
+   transition: none !important;
+   border-bottom: none !important;
+   /* border-bottom: 4px solid #d0ae0d !important; */
+ }
+
+/* .ant-menu-horizontal > .ant-menu-item::after,
+.ant-menu-horizontal > .ant-menu-submenu::after { */
+  /* border-bottom: none !important; */
+  /* transition: none !important; */
+/* } */
+
+/* .ant-menu-horizontal > .ant-menu-item:hover {
+   border-bottom: 4px solid #d0ae0d !important;
+ } */
+
+ /* .ant-menu-horizontal > .ant-menu-item:active {
+   border-bottom: 4px solid #d0ae0d !important;
+ } */
+
+.ant-menu-horizontal > .ant-menu-item-open:active {
+   border-bottom: 4px solid #d0ae0d !important;
+ } 
+
+ .ant-menu-horizontal > .ant-menu-item-open {
+   border-bottom: 4px solid #d0ae0d !important;
+ }
+
+
+ /* ANT DESIGN DEFINITIONS */
+ /* active - means it's being hovered over. adding :hover does nothing more */
+/* active - means it's being hovered over. adding :hover does nothing more */
