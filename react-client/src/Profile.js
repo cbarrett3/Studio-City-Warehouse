@@ -51,10 +51,10 @@ function Profile() {
 export default Profile;
 
 //   return (
-//     <Authenticator
-//       initialState="signUp"
-//       loginMechanisms={['username', 'email']}
-//     >
+   //  <Authenticator
+   //    initialState="signUp"
+   //    loginMechanisms={['username', 'email']}
+   //  >
 //       {({ signOut }) => (
 //         <Container>
 //           {console.log(user)}

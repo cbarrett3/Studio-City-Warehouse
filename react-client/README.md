@@ -82,6 +82,7 @@ Your app is ready to be deployed!
 ##### Amplify CLI Basics
 - `amplify status`
 - `amplify add`
+- `amplify update {service}`
 - `amplify push` to actually push updates to your amplify services in aws
 - `amplify console`
 - `amplify publish`
