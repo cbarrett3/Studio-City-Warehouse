@@ -1,5 +1,7 @@
 import React from 'react';
 import Container from './Container';
+import Homepage from './Homepage';
+
 /**
  * Viewable whether or not the user is signed in.
  */
@@ -7,8 +9,7 @@ import Container from './Container';
 function Public() {
   return (
     <Container>
-      <h1>Public route</h1>
-      asdf
+      <Homepage />
     </Container>
   );
 }

@@ -92,7 +92,7 @@ Your app is ready to be deployed!
 
 ##### Amplify Folder Structure
 - `amplify`: code and config for amplify project
-- `amplify/backend`: local code for project such as the GraphQL schema for an AppSync API, the source cdoe for any serverless functions, and infastrcture as code representing the current local status of the Amplify project
+- `amplify/backend`: local code for project such as the GraphQL schema for an AppSync API, the source code for any serverless functions, and infastrcture as code representing the current local status of the Amplify project
 - `amplify/#current-cloud-backend`: holds the code and configurations that reflect what resources were deployed in to the cloud with your last Amplify push command. It helps the CLI differentiate between the configuration of the resources already provisioned in the cloud and what is currently in your local backend directory (which reflects your local changes).
 
 
