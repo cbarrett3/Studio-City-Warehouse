@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Auth } from 'aws-amplify';
 import Container from './Container';
 import protectedRoute from './protectedRoute';
+import TodoList from './TodoList';
+import Planner from './Planner';
 /**
  * Protected Route. Signed in users can view - others are redirected to the Sign-In form.
  */
@@ -13,9 +15,18 @@ function Protected() {
   //     });
   //   }, []);
   return (
-    <Container>
-      <h1>Protected route</h1>
-    </Container>
+    <div
+      style={{
+        backgroundColor: '#212121',
+        height: '100vh',
+        overflowY: 'hidden',
+      }}
+    >
+      <Container>
+        <h1>Protected route</h1>
+        <Planner />
+      </Container>
+    </div>
   );
 }
 

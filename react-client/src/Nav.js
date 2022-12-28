@@ -89,7 +89,11 @@ const Nav = (props) => {
   return (
     <BrowserRouter>
       <div>
-        <Menu mode="horizontal" items={menuItems}></Menu>
+        <Menu
+          mode="horizontal"
+          items={menuItems}
+          style={{ backgroundColor: 'black' }}
+        ></Menu>
         <Routes>
           <Route path="/profile" element={<Profile />} />
           <Route path="/protected" element={<Protected />} />

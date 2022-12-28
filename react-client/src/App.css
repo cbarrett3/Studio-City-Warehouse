@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+h1 {
+  color: whitesmoke;
+  font-size: 2em; /* Increase the font size */
+  text-align: center; /* Center the text */
+  text-transform: uppercase; /* Make the text all uppercase */
+  font-weight: bold; /* Make the text bold */
+  margin: 0; /* Remove the default margin */
+  padding: 1em 0; /* Add some padding to the top and bottom of the element */
+}
+
+h2 {
+  color: white;
+  font-size: 1.5em; /* Increase the font size */
+  text-align: center; /* Center the text */
+  font-weight: bold; /* Make the text bold */
+  margin: 0; /* Remove the default margin */
+  padding: 0.5em 0; /* Add some padding to the top and bottom of the element */
+}

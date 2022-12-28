@@ -8,9 +8,17 @@ import Homepage from './Homepage';
 
 function Public() {
   return (
-    <Container>
-      <Homepage />
-    </Container>
+    <div
+      style={{
+        backgroundColor: 'black',
+        height: '100vh',
+        overflowY: 'hidden',
+      }}
+    >
+      <Container>
+        <Homepage />
+      </Container>
+    </div>
   );
 }
 
