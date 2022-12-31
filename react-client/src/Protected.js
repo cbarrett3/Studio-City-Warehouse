@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Auth } from 'aws-amplify';
-import Container from './Container';
 import protectedRoute from './protectedRoute';
 import TodoList from './TodoList';
 import Planner from './Planner';
@@ -22,10 +21,13 @@ function Protected() {
         overflowY: 'hidden',
       }}
     >
-      <Container>
+      <div
+        id="container"
+        style={{ margin: '0 auto', padding: '50px 10px' }}
+      >
         <h1>Protected route</h1>
         <Planner />
-      </Container>
+      </div>
     </div>
   );
 }

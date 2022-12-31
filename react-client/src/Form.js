@@ -129,53 +129,96 @@ function Form(props) {
   }
 
   return (
-    <div>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        marginTop: '15vh',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
       {renderForm()}
+
+      {/* sign up */}
       {formType === 'signUp' && (
-        <p style={styles.toggleForm}>
-          Already have an account?
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            fontFamily: 'Work Sans',
+          }}
+        >
+          <p style={{ color: 'darkgray' }}>{`been here before? `}</p>
           <span
-            style={styles.anchor}
+            style={{
+              color: '#3bf',
+              paddingLeft: '5px',
+              cursor: 'pointer',
+            }}
             onClick={() => updateFormType('signIn')}
+            onMouseEnter={(e) => {
+              e.target.style.color = '#d0ae0d';
+              e.target.style.opacity = '.9';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.color = '#3bf';
+              e.target.style.opacity = '1';
+            }}
           >
-            Sign In
+            sign in
           </span>
-        </p>
+        </div>
       )}
+
+      {/* sign in */}
       {formType === 'signIn' && (
-        <>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
+          }}
+        >
           <p style={styles.toggleForm}>
-            Need an account?
             <span
               style={styles.anchor}
               onClick={() => updateFormType('signUp')}
+              onMouseEnter={(e) => {
+                e.target.style.color = '#d0ae0d';
+                e.target.style.opacity = '.9';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.color = '#3bf';
+                e.target.style.opacity = '1';
+              }}
             >
-              Sign Up
+              sign up
             </span>
           </p>
-          <p style={{ ...styles.toggleForm, ...styles.resetPassword }}>
-            Forget your password?
+          <p style={{ ...styles.toggleForm }}>
             <span
               style={styles.anchor}
               onClick={() => updateFormType('forgotPassword')}
+              onMouseEnter={(e) => {
+                e.target.style.color = '#d0ae0d';
+                e.target.style.opacity = '.9';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.color = '#3bf';
+                e.target.style.opacity = '1';
+              }}
             >
-              Reset Password
+              reset password
             </span>
           </p>
-        </>
+        </div>
       )}
     </div>
   );
 }
 
 const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginTop: 150,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
   input: {
     height: 45,
     marginTop: 8,
@@ -188,19 +231,13 @@ const styles = {
     borderBottom: '2px solid rgba(0, 0, 0, .3)',
   },
   toggleForm: {
-    fontWdight: '600',
-    padding: '0px, 25px',
-    marginTop: '15px',
-    marginBottom: 0,
-    textAlign: 'center',
-    color: 'rgba(0, 0, 0, .6)',
-  },
-  resetPassword: {
-    marginTop: '5px',
+    color: 'whitesmoke',
+    fontFamily: 'Work Sans',
   },
   anchor: {
-    color: '#006bfc',
+    color: '#3bf',
     cursor: 'pointer',
+    padding: 45,
   },
 };
 

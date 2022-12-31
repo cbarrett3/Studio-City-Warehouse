@@ -1,27 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import Public from './Public';
+import Homepage from './Homepage';
 import Profile from './Profile';
 import Protected from './Protected';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  NavLink,
-  useLocation,
-} from 'react-router-dom';
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import { Menu } from 'antd';
 import {
   HomeOutlined,
-  ProfileOutlined,
+  SmileOutlined,
   FileProtectOutlined,
+  BarChartOutlined,
+  PushpinOutlined,
 } from '@ant-design/icons';
 /**
  * Navigation UI
  */
 
 const Nav = (props) => {
-  const [selectedKeys, setSelectedKeys] = useState(['home']);
-
   const menuItems = [
     {
       key: 'home',
@@ -32,37 +26,13 @@ const Nav = (props) => {
             isActive
               ? {
                   color: '#d0ae0d',
-                  //  borderBottom: '4px solid #d0ae0d',
                 }
               : { color: 'gray' }
           }
         >
           <HomeOutlined />
-          {`     Home`}
         </NavLink>
       ),
-      //  style: { borderBottom: '4px solid #d0ae0d' },
-    },
-    {
-      key: 'profile',
-      icon: (
-        <NavLink
-          to="profile"
-          style={({ isActive }) =>
-            isActive
-              ? {
-                  color: '#d0ae0d',
-                }
-              : { color: 'gray' }
-          }
-          //  onSelect={() => setSelectedKeys('profile')}
-        >
-          <ProfileOutlined />
-          {`     Profile`}
-        </NavLink>
-      ),
-      //  label: 'Profile',
-      //  style: { borderBottom: 'none !important' },
     },
     {
       key: 'protected',
@@ -77,27 +47,71 @@ const Nav = (props) => {
               : { color: 'gray' }
           }
         >
-          <FileProtectOutlined />
-          {`     Protected`}
+          <PushpinOutlined />
         </NavLink>
       ),
-      //  label: 'Protected',
-      //   style: { u: '#d0ae0d' },
     },
+    {
+      key: 'profile',
+      icon: (
+        <NavLink
+          to="profile"
+          style={({ isActive }) =>
+            isActive
+              ? {
+                  color: '#d0ae0d',
+                }
+              : { color: 'gray' }
+          }
+        >
+          <SmileOutlined />
+        </NavLink>
+      ),
+    },
+    //  {
+    //    key: 'usage-metrics',
+    //    icon: (
+    //      <NavLink
+    //        to="usage"
+    //        style={({ isActive }) =>
+    //          isActive
+    //            ? {
+    //                color: '#d0ae0d',
+    //              }
+    //            : { color: 'gray' }
+    //        }
+    //      >
+    //        <BarChartOutlined />
+    //      </NavLink>
+    //    ),
+    //  },
   ];
 
   return (
     <BrowserRouter>
-      <div>
+      <div
+        style={{
+          backgroundColor: 'black',
+          height: '100vh',
+          overflow: 'scroll',
+          overflowX: 'hidden',
+          overflowY: 'hidden',
+          borderImageWidth: 25,
+        }}
+      >
         <Menu
           mode="horizontal"
           items={menuItems}
-          style={{ backgroundColor: 'black' }}
+          style={{
+            backgroundColor: 'black',
+            borderImage:
+              'repeating-linear-gradient(45deg, #d0ae0d, #3bf, #d0ae0d 30px) 60',
+          }}
         ></Menu>
         <Routes>
           <Route path="/profile" element={<Profile />} />
           <Route path="/protected" element={<Protected />} />
-          <Route path="/" element={<Public />} />
+          <Route path="/" element={<Homepage />} />
         </Routes>
       </div>
     </BrowserRouter>

@@ -45,6 +45,7 @@ h1 {
   font-weight: bold; /* Make the text bold */
   margin: 0; /* Remove the default margin */
   padding: 1em 0; /* Add some padding to the top and bottom of the element */
+  font-family: 'Work Sans';
 }
 
 h2 {
@@ -54,4 +55,5 @@ h2 {
   font-weight: bold; /* Make the text bold */
   margin: 0; /* Remove the default margin */
   padding: 0.5em 0; /* Add some padding to the top and bottom of the element */
+  font-family: 'Work Sans';
 }
