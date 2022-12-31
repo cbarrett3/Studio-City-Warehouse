@@ -52,7 +52,7 @@ function ForgotPasswordSubmit({ forgotPasswordSubmit, updateFormState }) {
           height: '40px',
           marginBottom: '10px',
           fontSize: '16px',
-          backgroundColor: '#d0ae0d',
+          backgroundColor: '#B99A5B',
           color: '#FFFFFF',
           border: 'none',
           borderRadius: '5px',
@@ -62,11 +62,11 @@ function ForgotPasswordSubmit({ forgotPasswordSubmit, updateFormState }) {
         }}
         onMouseEnter={(e) => {
           e.target.style.backgroundColor = '#3bf';
-          e.target.style.boxShadow = '-2px 2px 10px 2px #d0ae0d';
+          e.target.style.boxShadow = '-2px 2px 10px 2px #B99A5B';
           e.target.style.opacity = '.9';
         }}
         onMouseLeave={(e) => {
-          e.target.style.backgroundColor = '#d0ae0d';
+          e.target.style.backgroundColor = '#B99A5B';
           e.target.style.opacity = '1';
           e.target.style.boxShadow = 'none';
         }}

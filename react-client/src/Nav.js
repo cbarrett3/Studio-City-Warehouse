@@ -25,7 +25,7 @@ const Nav = (props) => {
           style={({ isActive }) =>
             isActive
               ? {
-                  color: '#d0ae0d',
+                  color: '#B99A5B',
                 }
               : { color: 'gray' }
           }
@@ -42,7 +42,7 @@ const Nav = (props) => {
           style={({ isActive }) =>
             isActive
               ? {
-                  color: '#d0ae0d',
+                  color: '#B99A5B',
                 }
               : { color: 'gray' }
           }
@@ -59,7 +59,7 @@ const Nav = (props) => {
           style={({ isActive }) =>
             isActive
               ? {
-                  color: '#d0ae0d',
+                  color: '#B99A5B',
                 }
               : { color: 'gray' }
           }
@@ -76,7 +76,7 @@ const Nav = (props) => {
     //        style={({ isActive }) =>
     //          isActive
     //            ? {
-    //                color: '#d0ae0d',
+    //                color: '#B99A5B',
     //              }
     //            : { color: 'gray' }
     //        }
@@ -105,7 +105,7 @@ const Nav = (props) => {
           style={{
             backgroundColor: 'black',
             borderImage:
-              'repeating-linear-gradient(45deg, #d0ae0d, #3bf, #d0ae0d 30px) 60',
+              'repeating-linear-gradient(45deg, #B99A5B, #3bf, #B99A5B 30px) 60',
           }}
         ></Menu>
         <Routes>

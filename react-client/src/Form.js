@@ -158,7 +158,7 @@ function Form(props) {
             }}
             onClick={() => updateFormType('signIn')}
             onMouseEnter={(e) => {
-              e.target.style.color = '#d0ae0d';
+              e.target.style.color = '#B99A5B';
               e.target.style.opacity = '.9';
             }}
             onMouseLeave={(e) => {
@@ -185,7 +185,7 @@ function Form(props) {
               style={styles.anchor}
               onClick={() => updateFormType('signUp')}
               onMouseEnter={(e) => {
-                e.target.style.color = '#d0ae0d';
+                e.target.style.color = '#B99A5B';
                 e.target.style.opacity = '.9';
               }}
               onMouseLeave={(e) => {
@@ -201,7 +201,7 @@ function Form(props) {
               style={styles.anchor}
               onClick={() => updateFormType('forgotPassword')}
               onMouseEnter={(e) => {
-                e.target.style.color = '#d0ae0d';
+                e.target.style.color = '#B99A5B';
                 e.target.style.opacity = '.9';
               }}
               onMouseLeave={(e) => {
