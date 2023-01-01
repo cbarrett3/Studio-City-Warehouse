@@ -22,7 +22,7 @@ function Profile() {
     });
   }, []);
 
-  /* side effect helper functions */
+  /* side effect helpers */
   async function checkUser() {
     try {
       const data = await Auth.currentUserPoolUser();
@@ -38,7 +38,7 @@ function Profile() {
   }
 
   if (user != null) {
-    // user found
+    // user info found
     console.log(user);
     return (
       <div
@@ -69,9 +69,38 @@ function Profile() {
         >
           {user.email}
         </h2>
-        <Button style={{ marginTop: '10px' }} onClick={signOut}>
+        {/* <Button style={{ marginTop: '10px' }} onClick={signOut}>
           Sign Out
-        </Button>
+        </Button> */}
+        <button
+          onClick={signOut}
+          style={{
+            width: '125px',
+            height: '40px',
+            marginTop: '10px',
+            marginBottom: '10px',
+            fontSize: '16px',
+            backgroundColor: '#B99A5B',
+            color: '#FFFFFF',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            textAlign: 'left',
+            paddingLeft: '11px',
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.backgroundColor = '#3bf';
+            e.target.style.boxShadow = '-2px 2px 10px 2px #B99A5B';
+            e.target.style.opacity = '.9';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.backgroundColor = '#B99A5B';
+            e.target.style.opacity = '1';
+            e.target.style.boxShadow = 'none';
+          }}
+        >
+          👋 sign out
+        </button>
       </div>
     );
   } else {

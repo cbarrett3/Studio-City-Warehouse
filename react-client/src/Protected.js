@@ -7,12 +7,7 @@ import Planner from './Planner';
  * Protected Route. Signed in users can view - others are redirected to the Sign-In form.
  */
 
-function Protected() {
-  //   useEffect(() => {
-  //     Auth.currentAuthenticatedUser().catch(() => {
-  //       props.history.push('profile');
-  //     });
-  //   }, []);
+function Notes() {
   return (
     <div
       style={{
@@ -32,4 +27,4 @@ function Protected() {
   );
 }
 
-export default protectedRoute(Protected);
+export default protectedRoute(Notes, '/notes');

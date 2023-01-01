@@ -147,6 +147,7 @@ function Form(props) {
             display: 'flex',
             flexDirection: 'row',
             fontFamily: 'Work Sans',
+            marginTop: '10px',
           }}
         >
           <p style={{ color: 'darkgray' }}>{`been here before? `}</p>
@@ -178,6 +179,7 @@ function Form(props) {
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',
+            marginTop: '10px',
           }}
         >
           <p style={styles.toggleForm}>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Homepage from './Homepage';
 import Profile from './Profile';
 import Protected from './Protected';
+import { Auth, Hub } from 'aws-amplify';
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import { Menu } from 'antd';
 import {
@@ -16,7 +17,70 @@ import {
  */
 
 const Nav = (props) => {
-  const menuItems = [
+  /* profile componenet state */
+  const [user, setUser] = useState(null);
+
+  /* side effects */
+  useEffect(() => {
+    checkUser();
+    Hub.listen('auth', (data) => {
+      const { payload } = data;
+      if (payload.event === 'signOut') {
+        setUser(null);
+      }
+    });
+  }, []);
+
+  /* side effect helpers */
+  async function checkUser() {
+    try {
+      const data = await Auth.currentUserPoolUser();
+      const userInfo = { username: data.username, ...data.attributes };
+      setUser(userInfo);
+      console.log(userInfo);
+    } catch (err) {
+      console.log('error: ', err);
+    }
+  }
+
+  const publicMenuItems = [
+    {
+      key: 'home',
+      icon: (
+        <NavLink
+          to="/"
+          style={({ isActive }) =>
+            isActive
+              ? {
+                  color: '#B99A5B',
+                }
+              : { color: 'gray' }
+          }
+        >
+          <HomeOutlined />
+        </NavLink>
+      ),
+    },
+    {
+      key: 'profile',
+      icon: (
+        <NavLink
+          to="profile"
+          style={({ isActive }) =>
+            isActive
+              ? {
+                  color: '#B99A5B',
+                }
+              : { color: 'gray' }
+          }
+        >
+          <SmileOutlined />
+        </NavLink>
+      ),
+    },
+  ];
+
+  const privateMenuItems = [
     {
       key: 'home',
       icon: (
@@ -68,23 +132,6 @@ const Nav = (props) => {
         </NavLink>
       ),
     },
-    //  {
-    //    key: 'usage-metrics',
-    //    icon: (
-    //      <NavLink
-    //        to="usage"
-    //        style={({ isActive }) =>
-    //          isActive
-    //            ? {
-    //                color: '#B99A5B',
-    //              }
-    //            : { color: 'gray' }
-    //        }
-    //      >
-    //        <BarChartOutlined />
-    //      </NavLink>
-    //    ),
-    //  },
   ];
 
   return (
@@ -101,7 +148,7 @@ const Nav = (props) => {
       >
         <Menu
           mode="horizontal"
-          items={menuItems}
+          items={user ? privateMenuItems : publicMenuItems}
           style={{
             backgroundColor: 'black',
             borderImage:
