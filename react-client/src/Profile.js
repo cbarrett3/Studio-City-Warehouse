@@ -3,43 +3,45 @@ import { Button } from 'antd';
 import { Auth, Hub } from 'aws-amplify';
 import { Authenticator } from '@aws-amplify/ui-react';
 import Form from './Form';
+import { OmitProps } from 'antd/lib/transfer/ListBody';
 /**
  * Render Profile Information about the Logged-In User. Sign-Up and Sign-In Auth Components also.
  */
 
-function Profile() {
+function Profile(props) {
   /* profile componenet state */
-  const [user, setUser] = useState(null);
+  //   const [user, setUser] = useState(null);
 
   /* side effects */
-  useEffect(() => {
-    checkUser();
-    Hub.listen('auth', (data) => {
-      const { payload } = data;
-      if (payload.event === 'signOut') {
-        setUser(null);
-      }
-    });
-  }, []);
+  //   useEffect(() => {
+  //     checkUser();
+  //     Hub.listen('auth', (data) => {
+  //       const { payload } = data;
+  //       if (payload.event === 'signOut') {
+  //         setUser(null);
+  //       }
+  //     });
+  //   }, []);
 
   /* side effect helpers */
-  async function checkUser() {
-    try {
-      const data = await Auth.currentUserPoolUser();
-      const userInfo = { username: data.username, ...data.attributes };
-      setUser(userInfo);
-      console.log(userInfo);
-    } catch (err) {
-      console.log('error: ', err);
-    }
-  }
-  async function signOut() {
+  //   async function checkUser() {
+  //     try {
+  //       const data = await Auth.currentUserPoolUser();
+  //       const userInfo = { username: data.username, ...data.attributes };
+  //       setUser(userInfo);
+  //       console.log(userInfo);
+  //     } catch (err) {
+  //       console.log('error: ', err);
+  //     }
+  //   }
+  async function signOut({ props }) {
     Auth.signOut().catch((err) => console.log('error signing out: ', err));
+    //  props.setUser('');
   }
 
-  if (user != null) {
+  if (props.username != null) {
     // user info found
-    console.log(user);
+    console.log(props.username);
     return (
       <div
         id="container"
@@ -59,7 +61,7 @@ function Profile() {
             fontSize: '1rem',
           }}
         >
-          {user.username}
+          {props.username}
         </h1>
         <h2
           style={{
@@ -67,7 +69,7 @@ function Profile() {
             fontSize: '.75rem',
           }}
         >
-          {user.email}
+          {props.email}
         </h2>
         {/* <Button style={{ marginTop: '10px' }} onClick={signOut}>
           Sign Out
@@ -105,7 +107,7 @@ function Profile() {
     );
   } else {
     // auth form
-    return <Form setUser={setUser} />;
+    return <Form setUser={props.setUser} />;
   }
 }
 

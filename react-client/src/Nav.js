@@ -16,9 +16,11 @@ import {
  * Navigation UI
  */
 
+// want to get notified when sign out is clicked
+
 const Nav = (props) => {
   /* profile componenet state */
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(undefined);
 
   /* side effects */
   useEffect(() => {
@@ -26,7 +28,7 @@ const Nav = (props) => {
     Hub.listen('auth', (data) => {
       const { payload } = data;
       if (payload.event === 'signOut') {
-        setUser(null);
+        setUser(undefined);
       }
     });
   }, []);
@@ -37,7 +39,7 @@ const Nav = (props) => {
       const data = await Auth.currentUserPoolUser();
       const userInfo = { username: data.username, ...data.attributes };
       setUser(userInfo);
-      console.log(userInfo);
+      console.log('use effect check user happening');
     } catch (err) {
       console.log('error: ', err);
     }
@@ -146,9 +148,12 @@ const Nav = (props) => {
           borderImageWidth: 25,
         }}
       >
+        {console.log(typeof user === 'object')}
         <Menu
           mode="horizontal"
-          items={user ? privateMenuItems : publicMenuItems}
+          items={
+            typeof user === 'object' ? privateMenuItems : publicMenuItems
+          }
           style={{
             backgroundColor: 'black',
             borderImage:
@@ -156,7 +161,16 @@ const Nav = (props) => {
           }}
         ></Menu>
         <Routes>
-          <Route path="/profile" element={<Profile />} />
+          <Route
+            path="/profile"
+            element={
+              <Profile
+                username={user?.username}
+                email={user?.email}
+                setUser={setUser}
+              ></Profile>
+            }
+          />
           <Route path="/protected" element={<Protected />} />
           <Route path="/" element={<Homepage />} />
         </Routes>
