@@ -7,7 +7,7 @@ import Planner from './Planner';
  * Protected Route. Signed in users can view - others are redirected to the Sign-In form.
  */
 
-function Notes() {
+function Notes(props) {
   return (
     <div
       style={{
@@ -20,7 +20,7 @@ function Notes() {
         id="container"
         style={{ margin: '0 auto', padding: '50px 10px' }}
       >
-        <h1>Protected route</h1>
+        <h1>Notes</h1>
         <Planner />
       </div>
     </div>

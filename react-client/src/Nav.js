@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Homepage from './Homepage';
 import Profile from './Profile';
-import Protected from './Protected';
+import Notes from './Notes';
+import Board from './Board';
 import { Auth, Hub } from 'aws-amplify';
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import { Menu } from 'antd';
@@ -101,10 +102,10 @@ const Nav = (props) => {
       ),
     },
     {
-      key: 'protected',
+      key: 'board',
       icon: (
         <NavLink
-          to="protected"
+          to="board"
           style={({ isActive }) =>
             isActive
               ? {
@@ -161,6 +162,8 @@ const Nav = (props) => {
           }}
         ></Menu>
         <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/board" element={<Board />} />
           <Route
             path="/profile"
             element={
@@ -171,8 +174,6 @@ const Nav = (props) => {
               ></Profile>
             }
           />
-          <Route path="/protected" element={<Protected />} />
-          <Route path="/" element={<Homepage />} />
         </Routes>
       </div>
     </BrowserRouter>

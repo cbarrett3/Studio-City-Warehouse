@@ -3,40 +3,13 @@ import { Button } from 'antd';
 import { Auth, Hub } from 'aws-amplify';
 import { Authenticator } from '@aws-amplify/ui-react';
 import Form from './Form';
-import { OmitProps } from 'antd/lib/transfer/ListBody';
 /**
  * Render Profile Information about the Logged-In User. Sign-Up and Sign-In Auth Components also.
  */
 
 function Profile(props) {
-  /* profile componenet state */
-  //   const [user, setUser] = useState(null);
-
-  /* side effects */
-  //   useEffect(() => {
-  //     checkUser();
-  //     Hub.listen('auth', (data) => {
-  //       const { payload } = data;
-  //       if (payload.event === 'signOut') {
-  //         setUser(null);
-  //       }
-  //     });
-  //   }, []);
-
-  /* side effect helpers */
-  //   async function checkUser() {
-  //     try {
-  //       const data = await Auth.currentUserPoolUser();
-  //       const userInfo = { username: data.username, ...data.attributes };
-  //       setUser(userInfo);
-  //       console.log(userInfo);
-  //     } catch (err) {
-  //       console.log('error: ', err);
-  //     }
-  //   }
-  async function signOut({ props }) {
+  async function signOut() {
     Auth.signOut().catch((err) => console.log('error signing out: ', err));
-    //  props.setUser('');
   }
 
   if (props.username != null) {
@@ -112,20 +85,3 @@ function Profile(props) {
 }
 
 export default Profile;
-
-//   return (
-//  <Authenticator
-//    initialState="signUp"
-//    loginMechanisms={['username', 'email']}
-//  >
-//       {({ signOut }) => (
-//         <Container>
-//           {console.log(user)}
-//           <h1>Profile</h1>
-//           <h2>Username: {user.username}</h2>
-//           <h3>Email: {user.email}</h3>
-//           <button onClick={signOut}>Sign out</button>
-//         </Container>
-//       )}
-//     </Authenticator>
-//   );
