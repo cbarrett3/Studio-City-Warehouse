@@ -10,19 +10,17 @@ const Column = ({ col: { list, id } }) => {
       {(provided) => (
         <div
           style={{
-            padding: '24px 16px',
+            padding: '4px 8px',
             display: 'flex',
             flexDirection: 'column',
-            marginTop: 8,
-            h2: {
-              margin: 0,
-              padding: '0 16px',
-            },
+            backgroundColor: '#080808',
+            borderRadius: '3px',
           }}
         >
           <h2
             style={{
-              color: 'gray',
+              color: '#B99A5B',
+              fontSize: '.85rem',
             }}
           >
             {id}
@@ -31,13 +29,13 @@ const Column = ({ col: { list, id } }) => {
             {...provided.droppableProps}
             ref={provided.innerRef}
             style={{
-              backgroundColor: 'lightgray',
-              borderRadius: 8,
-              padding: 16,
+              borderRadius: '4px',
+              padding: '2px',
               display: 'flex',
               flexDirection: 'column',
               flexGrow: 1,
-              marginTop: 8,
+              marginTop: '4px',
+              fontSize: '.5rem',
             }}
           >
             {list.map((text, index) => (

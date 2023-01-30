@@ -7,14 +7,14 @@ function Board() {
     todo: {
       id: 'todo',
       list: [
-        'finish board component',
-        'hook it up w with api',
-        'figure sum out',
+        'finish notes page of sc react app',
+        'figure if other pages on necessary in sc react app',
+        'studio city mobile backend aws amplify',
       ],
     },
     doing: {
       id: 'doing',
-      list: ['board component', 'try drag and drop', 'stay up late..'],
+      list: ['notes page of this web app'],
     },
     done: {
       id: 'done',
@@ -98,10 +98,12 @@ function Board() {
         style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr 1fr',
-          margin: '10vh auto',
-          width: '80%',
-          height: '80vh',
-          gap: '8px',
+          //  margin: '10vh auto',
+          width: '50%',
+          height: '100vh',
+          gap: '4px',
+          overflow: 'auto',
+          //  backgroundColor: 'black',
         }}
       >
         {Object.values(columns).map((col) => (
