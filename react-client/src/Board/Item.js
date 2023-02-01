@@ -20,7 +20,7 @@ const Item = ({ text, index }) => {
           <h2
             style={{
               color: 'whitesmoke',
-              backgroundColor: '#101010',
+              backgroundColor: '#040406',
               borderRadius: '3px',
               padding: '15px',
             }}

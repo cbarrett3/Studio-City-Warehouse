@@ -139,10 +139,11 @@ const Nav = (props) => {
 
   return (
     <BrowserRouter>
+      {/* full screen style */}
       <div
         style={{
           backgroundColor: 'black',
-          height: '100vh',
+          height: '200vh',
           overflow: 'scroll',
           overflowX: 'hidden',
           overflowY: 'hidden',
@@ -155,6 +156,7 @@ const Nav = (props) => {
           items={
             typeof user === 'object' ? privateMenuItems : publicMenuItems
           }
+          //  navbar style
           style={{
             backgroundColor: 'black',
             borderImage:

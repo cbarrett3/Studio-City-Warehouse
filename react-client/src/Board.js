@@ -24,7 +24,6 @@ function Board() {
   const [columns, setColumns] = useState(initialColumns);
 
   const onDragEnd = ({ source, destination }) => {
-    console.log(source);
     // Make sure we have a valid destination
     if (destination === undefined || destination === null) return null;
 
@@ -93,24 +92,35 @@ function Board() {
   };
 
   return (
-    <DragDropContext onDragEnd={onDragEnd}>
+    <>
+      <DragDropContext onDragEnd={onDragEnd}>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr 1fr',
+            margin: '15px',
+            height: 'calc(100vh - (75px))',
+            gap: '12px',
+          }}
+        >
+          {Object.values(columns).map((col) => (
+            <Column col={col} key={col.id} />
+          ))}
+        </div>
+      </DragDropContext>
       <div
         style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr 1fr',
-          //  margin: '10vh auto',
-          width: '50%',
           height: '100vh',
-          gap: '4px',
-          overflow: 'auto',
-          //  backgroundColor: 'black',
+          backgroundColor: 'whitesmoke',
         }}
       >
-        {Object.values(columns).map((col) => (
-          <Column col={col} key={col.id} />
-        ))}
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.connorbarrett.dev/"
+        ></iframe>
       </div>
-    </DragDropContext>
+    </>
   );
 }
 
