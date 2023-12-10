@@ -1,4 +1,4 @@
-# StudioCity Mobile App
+# StudioCity
 
 ## Overview
 StudioCity is a a fully built-out UI for a social media app that would allow artists to connect and interact. The UI was designed with Adobe XD and implemented with UI Kittens as the key component library and design system. It uses react native navigation for smooth in-app navigation through dynamic routes. The homepage is TikTok inspired with vertical scolling and zero margins, while the profile pages include horizontal scrolling for a very intuitive and pleasent browsing experience. Right now, dummy data is leveraged on all of the pages - all it needs is an API. This was a passion project I worked on during COVID to upskill in mobile app development.
